@@ -9,38 +9,127 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 
 </head>
-<article class="media">
-  <figure class="media-left">
-    <p class="image is-200x200">
-      <img src="./assets/images/Untitled.jpg">
-    </p>
+<body>
+<header>
+<h1>Flights Website</h1> 
+      <nav class="navbar has-shadow is is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://deividhow.github.io/Project/">
+            <img src="./assets/images/download.jpg" style="max-height:120px " >
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-links">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="nav-links" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Hotels
+            </a>
+      
+            
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  About
+                </a>
+                <a class="navbar-item">
+                  Jobs
+                </a>
+                <a class="navbar-item">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <input type="text" id="search-input">
+          <button id="search-btn">search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero is-medium">
+        <div class="hero-body">
+          
+          <p class="title">
+            Hero title
+          </p>
+          <p class="subtitle">
+            Hero subtitle
+          </p>
+        </div>
+      </section>
+<section id="destinations" class="row" >
+
+  <figure class="image is-128x128">
+    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
   </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Florida</strong> <small>Miami</small> <small>21 Minutes</small>
-        <br>
-        This location is close to the beach and offer a lot of grat view for pictures.
-      </p>
-    </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-reply"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-heart"></i></span>
-        </a>
-      </div>
-    </nav>
-  </div>
-  <div class="media-right">
-    <button class="delete"></button>
-  </div>
-</article>
-     
+
+<figure id="small-img">
+  <figcaption>
+    <img src="https://placehold.co/200x200" alt="">
+    <h2>city</h2>
+  </figcaption>
+</figure>
+
+<figure id="small-img">
+  <figcaption>
+    <img src="https://placehold.co/800x100" alt="">
+    <h2>city</h2>
+  </figcaption>
+</figure>
+
+<figure id="small-img">
+  <figcaption>
+    <img src="https://placehold.co/800x100" alt="">
+    <h2>city</h2>
+  </figcaption>
+</figure>
+
+<figure id="small-img">
+  <figcaption>
+    <img src="https://placehold.co/800x100" alt="">
+    <h2>city</h2>
+  </figcaption>
+</figure>
+
+<figure id="small-img">
+  <figcaption>
+    <img src="https://placehold.co/800x100" alt="">
+    <h2>city</h2>
+  </figcaption>
+</figure>
+
+<figure id="small-img">
+  <figcaption>
+    <img src="https://placehold.co/800x100" alt="">
+    <h2>city</h2>
+  </figcaption>
+</figure>
+</section>
+
+
+</main>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
