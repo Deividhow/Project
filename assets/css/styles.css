@@ -1,26 +1,29 @@
 * {
     margin: 0;
     padding: 0;
-    
+    ;
   }
 
-  nav{
+.footer {
+  background:#131515 ;
+  color: #FFFAFB;
+}
+
+  /* nav{
     border: 1px solid red;
-  }
+  } */
   
   header h1{
     font-size: xx-large;
     padding-left: 4%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
   }
-  figcaption h2{
-    position: absolute;
-    bottom:10%;
-  }
+
+  
 
 .hero{
-    background-color: lightblue;
+    background-color: #339989 ;
     text-align: center;
 }
 
@@ -29,13 +32,15 @@
     padding-left: 2px;
   }
 
-  #small-img {
+  /* #small-img {
     padding-top:10px ;
     padding-left: 5px;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
     position: relative;
-  }
+  } */
  
   #destinations {
     padding: 5px;
+    
   }
+   
