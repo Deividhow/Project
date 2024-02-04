@@ -3,6 +3,7 @@ var searchButton = document.getElementById("search-btn")
 var image = document.getElementById("image")
 var description = document.getElementById("description")
 var titleH3 = document.getElementById("movie-t")
+var info = document.getElementById("info")
 
 async function searchMovie(){
     var movie = searchInput.value
@@ -59,7 +60,7 @@ try {
 }
 
 async function topMoviesApi(){
-	const url = 'https://imdb-top-100-movies.p.rapidapi.com/top32';
+	const url = 'https://imdb-top-100-movies.p.rapidapi.com/';
 const options = {
 	method: 'GET',
 	headers: {
@@ -72,6 +73,10 @@ try {
 	const response = await fetch(url, options);
 	const data = await response.json();
 	console.log(data);
+
+	for()
+	info.innerHTML = `<p>${data[0].rating}</p>`
+
 } catch (error) {
 	console.error(error);
 }
