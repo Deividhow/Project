@@ -1,9 +1,10 @@
 var searchInput = document.getElementById("search-input")
 var searchButton = document.getElementById("search-btn")
 var image = document.getElementById("image")
-var description = document.getElementById("description")
+var aboutMovie = document.getElementById("aboutMovie")
 var titleH3 = document.getElementById("movie-t")
 var info = document.getElementById("info")
+var moviesDisplay = document.getElementById("repeat-movie")
 
 async function searchMovie(){
     var movie = searchInput.value
@@ -49,7 +50,7 @@ try {
 	const response = await fetch(url, options);
 	const data = await response.json();
 	console.log(data);
-	description.innerHTML = `<p>${data.plot.plotText.plainText}</p>`
+	aboutMovie.innerHTML = `<p>${data.plot.plotText.plainText}</p>`
 	
 
 	
@@ -74,8 +75,50 @@ try {
 	const data = await response.json();
 	console.log(data);
 
-	for()
-	info.innerHTML = `<p>${data[0].rating}</p>`
+	for(var i = 0; i < 10; i++){
+		var topTen = data[i]
+		console.log(topTen)
+
+		
+		
+		moviesDisplay.innerHTML = moviesDisplay.innerHTML + (`<div class="box" id="repeat-movie">
+		<article class="media">
+		<div class="media-left">
+		  <figure id="img-3" class="image">
+			<img src=${data[i].image} alt="Image">
+		  </figure>
+		</div>
+		<div class="media-content">
+		  <div class="content">
+		  <h3><strong>${data[i].title}</strong></h3>
+			<p>
+			${data[i].description}
+			</p>
+		  </div>
+		  <nav class="level is-mobile">
+			<div class="level-left">
+			  <a class="level-item" aria-label="reply">
+				<span class="icon is-small">
+				  <i class="fas fa-reply" aria-hidden="true"></i>
+				</span>
+			  </a>
+			  <a class="level-item" aria-label="retweet">
+				<span class="icon is-small">
+				  <i class="fas fa-retweet" aria-hidden="true"></i>
+				</span>
+			  </a>
+			  <a class="level-item" aria-label="like">
+				<span class="icon is-small">
+				  <i class="fas fa-heart" aria-hidden="true"></i>
+				</span>
+			  </a>
+			</div>
+		  </nav>
+		</div>
+	  </article>
+	</div>`)
+	}
+	
 
 } catch (error) {
 	console.error(error);
