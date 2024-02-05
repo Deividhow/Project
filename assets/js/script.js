@@ -80,6 +80,8 @@ try {
 	const data = await response.json();
 	console.log(data);
 
+	localStorage.setItem("movieData", JSON.stringify(data))
+
 	for(var i = 0; i < 10; i++){
 		var topTen = data[i]
 		console.log(topTen)
@@ -108,28 +110,8 @@ try {
 			<br>
 			<p><strong>Release Year: </storng>  <text class="color">${data[i].year}</text>  </p>
 			<br>
-			<p><p><button id="favoriteTag">Favorite</button></p></p>
+			<p><button data-id="${i}" id="favoriteTag">Favorite</button></p>
 		  </div>
-		  
-		  <nav class="level is-mobile">
-			<div class="level-left">
-			  <a class="level-item" aria-label="reply">
-				<span class="icon is-small">
-				  <i class="fas fa-reply" aria-hidden="true"></i>
-				</span>
-			  </a>
-			  <a class="level-item" aria-label="retweet">
-				<span class="icon is-small">
-				  <i class="fas fa-retweet" aria-hidden="true"></i>
-				</span>
-			  </a>
-			  <a class="level-item" aria-label="like">
-				<span class="icon is-small">
-				  <i class="fas fa-heart" aria-hidden="true"></i>
-				</span>
-			  </a>
-			</div>
-		  </nav>
 		</div>
 	  </article>
 	</div>`)
@@ -140,8 +122,19 @@ try {
 	console.error(error);
 }
 }
+function favorite(event){
+	var movie = JSON.parse(localStorage.getItem("movieData")) || []
+	var i = event.target.getAttribute("data-id")
+	if(historyArray.includes(movie[i].imdbid)===false){
+		historyArray.push(movie[i])
+		localStorage.setItem("history", JSON.stringify(historyArray))
+	}
+	
 
+	
+}
 
+moviesDisplay.addEventListener('click', favorite)
 
 
 
