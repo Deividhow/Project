@@ -6,6 +6,8 @@ var titleH3 = document.getElementById("movie-t")
 var info = document.getElementById("info")
 var moviesDisplay = document.getElementById("repeat-movie")
 var ratingMovie = document.getElementById("rating")
+var favoriteMovie = document.getElementById("favoriteTag")
+var historyArray = JSON.parse(localStorage.getItem("history")) || []
 
 async function searchMovie(){
     var movie = searchInput.value
@@ -105,6 +107,8 @@ try {
 			<p><strong>Rating: </storng>  <text class="color">${data[i].rating}</text>  </p>
 			<br>
 			<p><strong>Release Year: </storng>  <text class="color">${data[i].year}</text>  </p>
+			<br>
+			<p><p><button id="favoriteTag">Favorite</button></p></p>
 		  </div>
 		  
 		  <nav class="level is-mobile">
