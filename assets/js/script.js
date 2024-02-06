@@ -134,19 +134,15 @@ function favorite(event){
 	
 }
 
+
+
+
+
 moviesDisplay.addEventListener('click', favorite)
 
 
 
 console.log(topMoviesApi())
-
-
-
-
-
-
-
-
 
 
 
